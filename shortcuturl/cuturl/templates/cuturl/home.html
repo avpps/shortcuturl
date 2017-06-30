@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <p>Enter URL and confirm</p>
+    <form action="{% url 'cuturl:addurl' %}" method='post'>
+        {% csrf_token %}
+        <input type="url" name="userurl">
+        <input type='submit' value="confirm">
+    </form>
+</body>
+</html>
